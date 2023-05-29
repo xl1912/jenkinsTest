@@ -20,7 +20,7 @@ node(){
 
     stage('npm run build') {
         try{
-            sh 'source /etc/profile'
+            sh './etc/profile'
             docker.image('node:12-alpine').inside {
                 sh 'node --version'
                 sh 'npm --version'
